@@ -1,38 +1,534 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!doctype html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plumber Services - Noida</title>
-  <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9;}
-    header {background: #007bff; color: #fff; padding: 20px; text-align: center;}
-    .service {background: #fff; margin: 10px auto; padding: 10px; border-radius: 10px; max-width: 700px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-    .service img {width: 100%; border-radius: 10px;}
-    .service h3 {margin: 10px 0 5px;}
-    .service p {margin: 5px 0;}
-    footer {background: #007bff; color: #fff; text-align: center; padding: 10px; margin-top: 20px;}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Farhan Plumbing Service</title>
+<meta name="description" content="Farhan Plumbing Service - Plumbing services in Gaur City and Noida sectors. Book online, WhatsApp confirmation.">
+<style>
+:root{--accent:#0ea5a4;--wa:#25d366;--bg:#f8fafc;--card:#fff;--text:#0f172a;--muted:#64748b}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text)}
+.wrap{max-width:1000px;margin:0 auto;padding:14px}
+.header{display:flex;align-items:center;justify-content:space-between;background:var(--accent);color:#fff;padding:12px;border-bottom:4px solid rgba(0,0,0,0.03);flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:72px;height:72px;border-radius:12px;object-fit:cover}
+.brand h1{margin:0;font-size:20px}
+.brand p{margin:0;font-size:13px}
+.topbar{display:flex;gap:8px;align-items:center}
+.lang-toggle{background:transparent;border:1px solid rgba(255,255,255,0.18);color:white;padding:6px 8px;border-radius:6px;cursor:pointer}
+.admin-link{background:rgba(255,255,255,0.12);padding:6px 8px;border-radius:6px;color:white;text-decoration:none}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
+.btn.wa{background:var(--wa)}
+.card{background:var(--card);padding:14px;border-radius:10px;margin:14px 0;box-shadow:0 8px 24px rgba(2,6,23,0.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:12px}
+.service-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.04);display:flex;flex-direction:column}
+.service-card img{width:100%;height:150px;object-fit:cover}
+.service-info{padding:10px;flex:1;display:flex;flex-direction:column}
+.service-info h4{margin:0 0 6px 0;font-size:16px}
+.meta{display:flex;justify-content:space-between;font-weight:800;margin-bottom:6px}
+.card-actions{margin-top:auto}
+.select-btn{background:var(--wa);color:#fff;border:none;padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:800}
+.form label{display:block;margin-bottom:8px;font-weight:700}
+.form input,.form select, .form textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #e6eef2;margin-top:6px}
+.price-row{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin-bottom:8px}
+.site-footer{background:#0f172a;color:#fff;padding:10px;margin-top:14px;text-align:center}
+.wa-float{position:fixed;right:16px;bottom:16px;background:var(--wa);color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.15);z-index:9999}
+.small{font-size:13px;color:var(--muted)}
+.profile-box{background:#fff;padding:10px;border-radius:8px;box-shadow:0 6px 12px rgba(2,6,23,0.03)}
+.location-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.location-item{background:#eef2ff;padding:6px 10px;border-radius:999px;color:#0b3b5a;font-weight:700}
+.claim-btn{background:#0ea5a4;color:#fff;padding:6px 8px;border-radius:6px;border:none;cursor:pointer}
+.help-box{display:flex;gap:8px;flex-direction:column}
+.badge{background:#eef2ff;color:#0b3b5a;padding:4px 8px;border-radius:999px;font-size:12px}
+@media(max-width:520px){.grid{grid-template-columns:repeat(2,1fr)}.brand h1{font-size:16px}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Plumber Services in Noida</h1>
-    <p>Available in Gaur City 1, Gaur City 2, Sector 75, 76, 82, 100, 104, 128, 137, 143, 146</p>
-  </header>
 
-  <div class="service">
-    <img src="https://via.placeholder.com/700x400?text=Tap+Repair" alt="Tap Repair">
-    <h3>Tap Repair - ₹99</h3>
-    <p>Quick and affordable tap repairing service at your doorstep.</p>
+<header class="header wrap">
+  <div class="brand">
+    <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?w=200&h=200&fit=crop" alt="Farhan">
+    <div>
+      <h1>Farhan Plumbing Service</h1>
+      <p class="small">Reliable plumbing services. 1 month free warranty on services.</p>
+    </div>
   </div>
-
-  <div class="service">
-    <img src="https://via.placeholder.com/700x400?text=Pipe+Fitting" alt="Pipe Fitting">
-    <h3>Pipe Fitting - ₹149</h3>
-    <p>High-quality pipe fitting service with expert plumbers.</p>
+  <div class="topbar">
+    <button id="toggleLang" class="lang-toggle">हिन्दी / EN</button>
+    <a class="admin-link" href="#" id="openAdmin">Admin</a>
+    <a class="btn wa" href="https://wa.me/919027608454" target="_blank">💬 WhatsApp</a>
+    <a class="btn" href="tel:+919027608454">📞 कॉल</a>
   </div>
+</header>
 
-  <div class="service">
-    <img src="https://via
+<main class="wrap">
+  <!-- Locations -->
+  <section class="card">
+    <h3>Service Areas — उपलब्ध लोकेशन</h3>
+    <p class="small">Our services are visible and available across the following localities. / हमारी सेवाएँ इन जगहों पर उपलब्ध हैं:</p>
+    <div class="location-list" id="locations"></div>
+    <p class="small" style="margin-top:8px">Note: Website visibility and service availability targeted for the listed sectors in Gaur City & Noida.</p>
+  </section>
 
-  <fook
+  <!-- Services grid -->
+  <section class="card">
+    <h3 id="servicesTitle">Our Services — हमारी सर्विसेस</h3>
+    <p class="small">Click a service to select and book. / किसी सर्विस पर क्लिक करके चुनें और बुक करें।</p>
+    <div id="services-grid" class="grid"></div>
+  </section>
+
+  <!-- Booking form -->
+  <section class="card">
+    <h3 id="bookTitle">Book Now — अभी बुक करें</h3>
+    <form id="booking-form" class="form">
+      <label>Customer Name / नाम
+        <input id="cname" required placeholder="Your name / आपका नाम">
+      </label>
+      <label>Phone / फ़ोन (country code + digits)
+        <input id="cphone" required placeholder="e.g. 9198XXXXXXXX">
+      </label>
+      <label>Address / पता
+        <input id="caddress" required placeholder="House/Street/Area">
+      </label>
+      <label>Choose Service / सर्विस चुनें
+        <select id="cservice"></select>
+      </label>
+
+      <div id="selectedServicePreview" class="profile-box" style="display:none;margin-top:8px"></div>
+
+      <label>Preferred Date & Time / पसंद की तारीख और समय
+        <input id="cdate" type="datetime-local">
+      </label>
+
+      <div class="price-row">
+        <div id="showPrice">Service Price: <strong>₹0</strong></div>
+        <div>Convenience Fee: <strong>₹65</strong></div>
+        <div id="totalRow">Total: <strong>₹0</strong></div>
+      </div>
+
+      <div class="note">Note: Materials/parts not included — parts should be provided by customer. / पार्ट्स ग्राहक देंगे।</div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn wa" id="bookBtn">Book & Send WhatsApp — बुक और WhatsApp भेजें</button>
+        <button type="button" id="clear-btn" class="btn">Clear</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- My Profile / Bookings -->
+  <section class="card">
+    <h3>My Bookings / मेरी बुकिंग</h3>
+    <p class="small">Enter your phone (same used for booking) to view bookings and make claim within 30 days.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+      <input id="profilePhone" placeholder="Enter phone e.g. 9198..." style="padding:8px;border-radius:8px;border:1px solid #e6eef2">
+      <button class="btn" id="loadBookingsBtn">Load Bookings</button>
+      <button class="btn" id="clearProfileBtn" style="background:#ef4444">Clear Local Bookings</button>
+    </div>
+    <div id="profileBookings"></div>
+  </section>
+
+  <!-- Help & Support -->
+  <section class="card">
+    <h3>Help & Support — सहायता</h3>
+    <div class="help-box">
+      <label>Your Name
+        <input id="helpName" placeholder="Your name / आपका नाम">
+      </label>
+      <label>Phone
+        <input id="helpPhone" placeholder="e.g. 9198...">
+      </label>
+      <label>Describe your problem / समस्या बताइए
+        <textarea id="helpMsg" rows="3" placeholder="Describe problem..."></textarea>
+      </label>
+      <div style="display:flex;gap:8px">
+        <button id="sendHelp" class="btn wa">Send to WhatsApp — WhatsApp पर भेजें</button>
+        <button id="clearHelp" class="btn">Clear</button>
+      </div>
+      <p class="small">When you click Send, a WhatsApp message will open to our support number for quick help.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Admin (Owner only)</h3>
+    <p class="small">Click Admin to manage services and view bookings (local browser storage). Password required.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2025 Farhan Plumbing Service</p>
+    <p class="small">Service availability shown for listed Gaur City & Noida sectors above.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919027608454?text=Hello%20Farhan" target="_blank" title="WhatsApp">💬</a>
+
+<!-- Admin modal -->
+<div id="adminModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99999;align-items:center;justify-content:center;">
+  <div style="background:#fff;max-width:900px;margin:24px auto;padding:16px;border-radius:10px;overflow:auto;max-height:90vh">
+    <h3>Admin Panel — मालिक पैनल</h3>
+    <div id="loginBox">
+      <p>Enter Admin Password / पासवर्ड डालें</p>
+      <input id="adminPass" type="password" placeholder="Password" style="padding:8px;border-radius:8px;border:1px solid #e6eef2;width:60%">
+      <button id="adminLoginBtn" class="btn">Login</button>
+      <button id="closeAdmin" class="btn" style="background:#ef4444">Close</button>
+      <p class="small muted">Client-side password (local only). Use on your device.</p>
+    </div>
+
+    <div id="adminArea" style="display:none">
+      <h4>Services — संपादित / जोड़ें</h4>
+      <div id="adminServicesList"></div>
+
+      <h4>Add / Update Service</h4>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+        <input id="sname" placeholder="Service name" style="padding:8px;border-radius:8px;border:1px solid #e6eef2">
+        <input id="sprice" placeholder="Price" style="padding:8px;border-radius:8px;border:1px solid #e6eef2;width:120px">
+        <input id="stime" placeholder="Time" style="padding:8px;border-radius:8px;border:1px solid #e6eef2;width:140px">
+        <input id="simg" placeholder="Image URL (optional)" style="padding:8px;border-radius:8px;border:1px solid #e6eef2;width:220px">
+        <button id="addServiceBtn" class="btn">Add Service</button>
+      </div>
+
+      <h4>Bookings</h4>
+      <div id="adminBookings"></div>
+
+      <div style="margin-top:12px">
+        <button id="exportData" class="btn">Export Data (JSON)</button>
+        <button id="clearData" class="btn" style="background:#ef4444">Clear All Local Data</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* CONFIG */
+const OWNER_WA = '919027608454';
+const CONVENIENCE_FEE = 65;
+const ADMIN_PASSWORD = '9027';
+const LS_SERVICES = 'farhan_services_v3';
+const LS_BOOKINGS = 'farhan_bookings_v3';
+const LS_PROFILE_PHONE = 'farhan_profile_phone_v1';
+
+/* Locations list requested */
+const LOCATIONS = [
+  "Gaur City 2","Gaur City 1",
+  "Sector 75 Noida","Sector 137 Noida","Sector 143 Noida","Sector 128 Noida","Sector 82 Noida",
+  "Sector 76 Noida","Sector 45 Noida","Sector 100 Noida","Sector 104 Noida","Sector 146 Noida",
+  "Whole Gaur City"
+];
+
+/* DEFAULT SERVICES (full list) with Unsplash query images for HD look */
+const DEFAULT_SERVICES = [
+  {name:"Regular tap repair (Repair)", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?plumbing,tap"},
+  {name:"Swan tap (Repair)", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?swan,tap,plumbing"},
+  {name:"Hot & Cold mixer (repair)", price:199, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?mixer,hot,cold,plumbing"},
+  {name:"Shower mixer (repair)", price:199, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?shower,mixer"},
+  {name:"Regular tap installation", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?tap,installation"},
+  {name:"Hot & Cold mixer installation", price:199, time:"1 hr", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?mixer,installation"},
+  {name:"Shower mixer installation", price:199, time:"1 hr", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?shower,installation"},
+  {name:"Swan tap installation", price:248, time:"30-45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?swan,installation"},
+  {name:"Filter installation", price:79, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?water,filter,installation"},
+  {name:"Extender installation", price:89, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?extender,installation"},
+  {name:"Water saving nozzle installation", price:99, time:"20 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?nozzle,water,saving"},
+  {name:"Tap double connection", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?tap,double,connection"},
+  {name:"Jet spray placement", price:99, time:"20 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?jet,spray,bathroom"},
+  {name:"Bidet jet", price:99, time:"20 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?bidet,jet"},
+  {name:"Flush tank external pvc repair", price:199, time:"30-45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?flush,tank,pvc"},
+  {name:"Flush tank external ceramic repair", price:199, time:"30-45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?flush,tank,ceramic"},
+  {name:"Concealed flush tank repair", price:219, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?concealed,flush,tank"},
+  {name:"External flush tank replacement", price:449, time:"1-2 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?flush,replace"},
+  {name:"Indian toilet installation/repair (complex)", price:1699, time:"2-4 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?toilet,indian"},
+  {name:"Indian toilet repair (basic)", price:699, time:"1-2 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?toilet,repair"},
+  {name:"Pot blockage removal", price:1299, time:"1-3 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?plumbing,blockage"},
+  {name:"Western wall-mounted install/replace", price:1399, time:"2-4 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?western,toilet,wall"},
+  {name:"Western wall-mounted repair", price:699, time:"1-2 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?western,toilet,repair"},
+  {name:"Western pot blockage removal", price:1299, time:"1-3 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?toilet,blockage"},
+  {name:"Western floor-mounted install/replace", price:1899, time:"3-5 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?floor,toilet,install"},
+  {name:"Western floor-mounted repair", price:699, time:"1-2 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?floor,toilet,repair"},
+  {name:"Western pot blockage removal (floor)", price:1299, time:"1-3 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?floor,blockage"},
+  {name:"Ceiling mounted shower installation", price:149, time:"1 hr", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?ceiling,shower,install"},
+  {name:"Wall mounted shower installation", price:139, time:"1 hr", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?wall,shower,install"},
+  {name:"Hand held shower install", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?handheld,shower"},
+  {name:"Shower filter installation", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?shower,filter"},
+  {name:"Shower TR repair", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?shower,repair"},
+  {name:"Soap holder installation", price:99, time:"15-30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?soap,holder,installation"},
+  {name:"Towel rack", price:149, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?towel,rack,installation"},
+  {name:"Holding rod", price:129, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?rod,installation"},
+  {name:"Small holder", price:99, time:"15-30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?holder"},
+  {name:"Clothing glass / shelf", price:119, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?glass,shelf"},
+  {name:"Corner shelf", price:99, time:"20 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?corner,shelf"},
+  {name:"Waste pipe leakage repair", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?waste,pipe,repair"},
+  {name:"Bottle trap repair", price:199, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?bottle,trap,repair"},
+  {name:"Wash basin blocked removal", price:199, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?basin,blocked"},
+  {name:"Wash basin installation", price:359, time:"1-2 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?basin,installation"},
+  {name:"Waste coupling installation", price:149, time:"30-45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?coupling,installation"},
+  {name:"Drain cover installation", price:149, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?drain,cover,installation"},
+  {name:"Balcony drain blockage", price:199, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?balcony,drain,blockage"},
+  {name:"Bathroom drain blockage removal", price:199, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?bathroom,drain,blockage"},
+  {name:"Toilet pot service", price:1299, time:"1-3 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?toilet,pot,service"},
+  {name:"Sink blockage", price:199, time:"45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?sink,blockage"},
+  {name:"Wash basin blockage", price:190, time:"30-45 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?wash,basin,block"},
+  {name:"Connection leakage / hose install", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?hose,install"},
+  {name:"Washing machine inlet install", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?washing,machine,inlet"},
+  {name:"RO water connection install", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?ro,water,connection"},
+  {name:"Geyser connection leakage repair", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?geyser,connection,repair"},
+  {name:"Shut off valve leakage repair", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?shutoff,valve,repair"},
+  {name:"Overhead water tank installation", price:599, time:"2-4 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?water,tank,installation"},
+  {name:"Water tank repair", price:99, time:"30-60 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?tank,repair"},
+  {name:"Motor installation", price:449, time:"1-2 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?motor,installation"},
+  {name:"Motor air cavity removal", price:99, time:"30 min", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?motor,repair,air"},
+  {name:"Bathroom grouting", price:1599, time:"3-6 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?grouting,bathroom"},
+  {name:"Kitchen grouting", price:1199, time:"2-4 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?grouting,kitchen"},
+  {name:"Water tank cleaning 1000 liter", price:1499, time:"3-6 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?tank,cleaning"},
+  {name:"Water tank cleaning 500 liter", price:999, time:"2-4 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?tank,cleaning,500"},
+  {name:"Water tank cleaning 1500 liter", price:1999, time:"4-8 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?tank,cleaning,1500"},
+  {name:"Water tank cleaning 2000 liter", price:2499, time:"4-10 hrs", desc:"1-month free warranty.", img:"https://source.unsplash.com/600x400/?tank,cleaning,2000"}
+];
+
+/* Local storage helpers */
+function getServices(){ const s = localStorage.getItem(LS_SERVICES); if(s) try{return JSON.parse(s);}catch(e){} localStorage.setItem(LS_SERVICES, JSON.stringify(DEFAULT_SERVICES)); return DEFAULT_SERVICES.slice();}
+function saveServices(arr){ localStorage.setItem(LS_SERVICES, JSON.stringify(arr)); }
+function getBookings(){ return JSON.parse(localStorage.getItem(LS_BOOKINGS) || '[]'); }
+function saveBookings(arr){ localStorage.setItem(LS_BOOKINGS, JSON.stringify(arr)); }
+function formatINR(x){ return '₹' + Number(x).toLocaleString('en-IN'); }
+
+/* Render locations */
+const locDiv = document.getElementById('locations');
+LOCATIONS.forEach(l => {
+  const el = document.createElement('div'); el.className='location-item'; el.textContent = l; locDiv.appendChild(el);
+});/* Render services grid and select */
+function renderServicesGrid(){
+  const services = getServices();
+  const grid = document.getElementById('services-grid');
+  const select = document.getElementById('cservice');
+  grid.innerHTML = ''; select.innerHTML = '';
+  services.forEach((s, idx) => {
+    const card = document.createElement('div'); card.className = 'service-card';
+    card.innerHTML = `
+      <img src="${s.img}" alt="${s.name}">
+      <div class="service-info">
+        <h4>${s.name}</h4>
+        <div class="meta"><span>${formatINR(s.price)}</span><span class="badge">${s.time}</span></div>
+        <details><summary>Details</summary><p class="small">${s.desc}</p></details>
+        <div class="card-actions"><button class="select-btn" data-idx="${idx}">Book Now</button></div>
+      </div>`;
+    grid.appendChild(card);
+    const opt = document.createElement('option'); opt.value = idx; opt.textContent = `${s.name} — ${formatINR(s.price)}`; select.appendChild(opt);
+  });
+
+  // update price & preview
+  function updatePrice(){ const s = services[select.value]; if(!s) return; document.getElementById('showPrice').innerHTML = 'Service Price: <strong>' + formatINR(s.price) + '</strong>'; document.getElementById('totalRow').innerHTML = 'Total: <strong>' + formatINR(Number(s.price) + CONVENIENCE_FEE) + '</strong>'; renderSelectedPreview(); }
+  select.addEventListener('change', updatePrice);
+
+  // card Book Now click
+  grid.addEventListener('click', (e)=>{ if(e.target.classList.contains('select-btn')){ const idx = e.target.dataset.idx; select.value = idx; updatePrice(); renderSelectedPreview(); document.getElementById('booking-form').scrollIntoView({behavior:'smooth'}); }});
+
+  if(services.length){ select.value = 0; select.dispatchEvent(new Event('change')); }
+}
+
+/* show selected service preview (image + name + price + time) */
+function renderSelectedPreview(){
+  const services = getServices();
+  const sel = document.getElementById('cservice');
+  const idx = sel.value;
+  const s = services[idx];
+  const box = document.getElementById('selectedServicePreview');
+  if(!s){ box.style.display='none'; return; }
+  box.style.display='block';
+  box.innerHTML = `<img src="${s.img}" alt="${s.name}" style="width:100%;max-height:220px;object-fit:cover;border-radius:6px;margin-bottom:8px"><strong>${s.name}</strong><div class="small">${s.time} • ${formatINR(s.price)}</div><div class="small" style="margin-top:6px">${s.desc}</div>`;
+}
+
+/* Booking form handling */
+document.getElementById('booking-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('cname').value.trim();
+  const phone = document.getElementById('cphone').value.trim();
+  const address = document.getElementById('caddress').value.trim();
+  const serviceIdx = document.getElementById('cservice').value;
+  const date = document.getElementById('cdate').value;
+  const services = getServices();
+  const s = services[serviceIdx];
+  if(!name || !phone || !address || !s){ alert('Please fill all required fields / सभी जानकारी भरें'); return; }
+  const conv = CONVENIENCE_FEE;
+  const total = Number(s.price) + conv;
+  // save booking
+  const bookings = getBookings();
+  const id = Date.now();
+  bookings.unshift({id, name, phone, address, serviceIndex: serviceIdx, serviceName: s.name, price: s.price, conv, total, date, created: new Date().toISOString(), claimed:false});
+  saveBookings(bookings);
+  localStorage.setItem(LS_PROFILE_PHONE, phone);
+  // WhatsApp message to owner
+  const lines = [
+    'New Booking - Farhan Plumbing Service',
+    'Name: ' + name,
+    'Phone: ' + phone,
+    'Address: ' + address,
+    'Service: ' + s.name,
+    'Service Price: ₹' + s.price,
+    'Convenience Fee: ₹' + conv,
+    'Total: ₹' + total,
+    date ? ('Preferred: ' + date) : '',
+    '',
+    'Please confirm booking.'
+  ];
+  const msg = encodeURIComponent(lines.join('\n'));
+  const waUrl = `https://wa.me/${OWNER_WA}?text=${msg}`;
+  window.open(waUrl, '_blank');
+  alert('Booking saved and WhatsApp opened to send details. / बुकिंग सेव हो गई।');
+  document.getElementById('booking-form').reset();
+  renderServicesGrid();
+});
+
+/* Profile: load bookings by phone */
+document.getElementById('loadBookingsBtn').addEventListener('click', loadProfileBookings);
+function loadProfileBookings(){
+  const phone = document.getElementById('profilePhone').value.trim() || localStorage.getItem(LS_PROFILE_PHONE) || '';
+  if(!phone){ alert('Enter phone number used for booking'); return; }
+  document.getElementById('profilePhone').value = phone;
+  const bookings = getBookings().filter(b => b.phone === phone);
+  const box = document.getElementById('profileBookings');
+  box.innerHTML = '';
+  if(!bookings.length){ box.innerHTML = '<p class="small muted">No bookings found for this number.</p>'; return; }
+  bookings.forEach(b => {
+    const div = document.createElement('div'); div.className='profile-box'; div.style.marginBottom='8px';
+    const created = new Date(b.created);
+    const daysSince = Math.floor((Date.now() - new Date(b.created))/ (1000*60*60*24));
+    const claimAvailable = (!b.claimed) && (daysSince <= 30);
+    div.innerHTML = `<strong>${b.serviceName}</strong> • ${formatINR(b.total)} • <div class="small">Booked: ${created.toLocaleString()}</div>
+      <div style="margin-top:6px"><img src="${getServices()[b.serviceIndex]?.img || ''}" alt="${b.serviceName}" style="width:100%;max-height:160px;object-fit:cover;border-radius:6px;margin-top:6px"></div>
+      <div style="margin-top:8px" class="small">Status: ${b.claimed ? 'Claimed' : (claimAvailable ? 'Claimable' : 'Claim expired')}</div>
+      <div style="margin-top:8px;display:flex;gap:8px">
+        ${claimAvailable ? `<button class="claim-btn" data-id="${b.id}">Claim Free Service</button>` : ''}
+        <button class="btn" data-id="${b.id}" onclick="contactOwner('${b.id}')">Contact Support</button>
+      </div>`;
+    box.appendChild(div);
+  });
+  box.querySelectorAll('.claim-btn').forEach(btn => {
+    btn.addEventListener('click', (e)=>{
+      const id = Number(e.target.dataset.id);
+      if(!confirm('Are you sure to make a claim for this booking? / क्या आप वाकई दावा कर रहे हैं?')) return;
+      const arr = getBookings();
+      const idx = arr.findIndex(x=>x.id===id);
+      if(idx===-1) return alert('Booking not found');
+      arr[idx].claimed = true;
+      saveBookings(arr);
+      alert('Claim registered. Please WhatsApp us with details if needed.');
+      loadProfileBookings();
+    });
+  });
+}
+document.getElementById('clearProfileBtn').addEventListener('click', ()=>{
+  if(!confirm('Clear all local bookings? This removes saved bookings from this browser.')) return;
+  localStorage.removeItem(LS_BOOKINGS);
+  document.getElementById('profileBookings').innerHTML = '<p class="small muted">Cleared.</p>';
+});
+
+/* contact owner from booking */
+function contactOwner(bookingId){
+  const b = getBookings().find(x=>x.id==bookingId);
+  const msg = encodeURIComponent(`Need help with booking:\nName: ${b?.name || ''}\nPhone: ${b?.phone || ''}\nService: ${b?.serviceName}\nPlease assist.`);
+  window.open(`https://wa.me/${OWNER_WA}?text=${msg}`, '_blank');
+}
+
+/* Help & Support sending */
+document.getElementById('sendHelp').addEventListener('click', ()=>{
+  const name = document.getElementById('helpName').value.trim();
+  const phone = document.getElementById('helpPhone').value.trim();
+  const msg = document.getElementById('helpMsg').value.trim();
+  if(!name || !phone || !msg) return alert('Please enter name, phone and message.');
+  const lines = [
+    'Support Request - Farhan Plumbing Service',
+    'Name: ' + name,
+    'Phone: ' + phone,
+    'Message: ' + msg
+  ];
+  const waUrl = `https://wa.me/${OWNER_WA}?text=${encodeURIComponent(lines.join('\n'))}`;
+  window.open(waUrl, '_blank');
+});
+
+/* Admin modal behavior */
+const adminModal = document.getElementById('adminModal');
+const openAdmin = document.getElementById('openAdmin');
+const closeAdmin = document.getElementById('closeAdmin');
+const adminLoginBtn = document.getElementById('adminLoginBtn');
+const adminPassEl = document.getElementById('adminPass');
+openAdmin.addEventListener('click', (e)=>{ e.preventDefault(); adminModal.style.display='flex'; });
+closeAdmin.addEventListener('click', ()=>{ adminModal.style.display='none'; document.getElementById('adminPass').value=''; document.getElementById('adminArea').style.display='none'; document.getElementById('loginBox').style.display='block'; });
+
+adminLoginBtn.addEventListener('click', ()=>{
+  const val = adminPassEl.value;
+  if(val === ADMIN_PASSWORD){
+    document.getElementById('loginBox').style.display='none';
+    document.getElementById('adminArea').style.display='block';
+    populateAdminServices(); populateBookingsAdmin();
+  } else alert('Incorrect password / पासवर्ड गलत है');
+});
+
+/* Admin functions */
+function populateAdminServices(){
+  const list = document.getElementById('adminServicesList');
+  list.innerHTML = '';
+  const services = getServices();
+  services.forEach((s, idx) => {
+    const row = document.createElement('div'); row.style.display='flex'; row.style.alignItems='center'; row.style.gap='8px'; row.style.marginBottom='8px';
+    row.innerHTML = `<input data-idx="${idx}" class="aname" value="${s.name}" style="flex:2;padding:6px;border-radius:6px;border:1px solid #e6eef2">
+      <input data-idx="${idx}" class="aprice" value="${s.price}" style="width:90px;padding:6px;border-radius:6px;border:1px solid #e6eef2">
+      <input data-idx="${idx}" class="atime" value="${s.time}" style="width:120px;padding:6px;border-radius:6px;border:1px solid #e6eef2">
+      <input data-idx="${idx}" class="aimg" value="${s.img}" style="flex:1;padding:6px;border-radius:6px;border:1px solid #e6eef2">
+      <button class="saveBtn btn" data-idx="${idx}">Save</button>
+      <button class="delBtn" data-idx="${idx}" style="background:#ef4444;color:#fff;padding:6px;border-radius:6px;border:none">Delete</button>`;
+    list.appendChild(row);
+  });
+  list.querySelectorAll('.saveBtn').forEach(b=>b.addEventListener('click',(ev)=>{
+    const i = Number(ev.target.dataset.idx);
+    const name = list.querySelector(`.aname[data-idx="${i}"]`).value;
+    const price = Number(list.querySelector(`.aprice[data-idx="${i}"]`).value);
+    const time = list.querySelector(`.atime[data-idx="${i}"]`).value;
+    const img = list.querySelector(`.aimg[data-idx="${i}"]`).value;
+    const arr = getServices();
+    arr[i].name = name; arr[i].price = price; arr[i].time = time; arr[i].img = img || arr[i].img;
+    saveServices(arr); alert('Saved'); populateAdminServices(); renderServicesGrid();
+  }));
+  list.querySelectorAll('.delBtn').forEach(b=>b.addEventListener('click',(ev)=>{
+    if(!confirm('Delete this service?')) return;
+    const i = Number(ev.target.dataset.idx); const arr = getServices(); arr.splice(i,1); saveServices(arr); populateAdminServices(); renderServicesGrid();
+  }));
+}
+document.getElementById('addServiceBtn').addEventListener('click', ()=>{
+  const name = document.getElementById('sname').value.trim(); const price = Number(document.getElementById('sprice').value); const time = document.getElementById('stime').value.trim()||'30 min'; const img = document.getElementById('simg').value.trim() || `https://source.unsplash.com/600x400/?plumbing,tools,${encodeURIComponent(name)}`;
+  if(!name || !price) return alert('Enter name and price');
+  const arr = getServices(); arr.unshift({name,price,time,desc:'1-month free warranty.',img}); saveServices(arr); document.getElementById('sname').value=''; document.getElementById('sprice').value=''; document.getElementById('stime').value=''; document.getElementById('simg').value=''; populateAdminServices(); renderServicesGrid();
+});
+function populateBookingsAdmin(){ const box = document.getElementById('adminBookings'); const bookings = getBookings(); box.innerHTML=''; if(!bookings.length) box.innerHTML='<p class="small muted">No bookings yet / अभी तक कोई बुकिंग नहीं</p>'; bookings.forEach(b=>{ const d = document.createElement('div'); d.style.border='1px solid #e6eef2'; d.style.padding='8px'; d.style.marginBottom='8px'; d.innerHTML = `<strong>${b.name}</strong> — ${b.serviceName} — ${formatINR(b.total)}<br>${b.phone} • ${b.address} <br><small>${new Date(b.created).toLocaleString()}</small> <br>Claimed: ${b.claimed ? 'Yes' : 'No'} <br><button class="delB" data-id="${b.id}" style="background:#ef4444;color:#fff;padding:6px;border-radius:6px;border:none">Delete</button>`; box.appendChild(d); }); box.querySelectorAll('.delB').forEach(btn=>btn.addEventListener('click', (e)=>{ if(!confirm('Delete booking?')) return; const id = Number(e.target.dataset.id); let arr = getBookings(); arr = arr.filter(x=>x.id !== id); saveBookings(arr); populateBookingsAdmin(); }));
+}
+document.getElementById('exportData').addEventListener('click', ()=>{
+  const data = {services:getServices(), bookings:getBookings()};
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data));
+  const a = document.createElement('a'); a.href=dataStr; a.download = 'farhan-site-data.json'; a.click();
+});
+document.getElementById('clearData').addEventListener('click', ()=>{
+  if(!confirm('Clear all local data? This will remove services edits and bookings.')) return;
+  localStorage.removeItem(LS_SERVICES); localStorage.removeItem(LS_BOOKINGS); alert('Local data cleared. Page will reload.'); location.reload();
+});
+
+/* Toggle language (simple) */
+let lang = 'both'; document.getElementById('toggleLang').addEventListener('click', ()=>{
+  lang = (lang === 'both') ? 'hi' : (lang === 'hi') ? 'en' : 'both';
+  if(lang==='hi'){ document.getElementById('servicesTitle').textContent='हमारी सर्विसेस'; document.getElementById('bookTitle').textContent='अभी बुक करें'; }
+  else if(lang==='en'){ document.getElementById('servicesTitle').textContent='Our Services'; document.getElementById('bookTitle').textContent='Book Now'; }
+  else{ document.getElementById('servicesTitle').textContent='Our Services — हमारी सर्विसेस'; document.getElementById('bookTitle').textContent='Book Now — अभी बुक करें'; }
+});
+
+/* initialize */
+renderServicesGrid();
+renderSelectedPreview();
+window.addEventListener('load', ()=>{
+  const p = localStorage.getItem(LS_PROFILE_PHONE);
+  if(p) document.getElementById('profilePhone').value = p;
+});
+</script>
+</body>
+</html>
